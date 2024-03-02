@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        
+        
+        div{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        
+        img{
+            height: 200px;
+            width: 200px;
+        }
+        
+        #parent{
+            display: flex;
+            position: relative;
+        }
+        #demo{
+            position: absolute;
+            left: 25%;
+            top: 50%;
+            width: 50%;
+            height: 80vh;
+            border: 2px solid;
+            
+        }
+        input{
+          text-align: center;
+        }
+        button {
+ --color: #560bad;
+ font-family: inherit;
+ display: inline-block;
+ width: 8em;
+ height: 2.6em;
+ line-height: 2.5em;
+ margin: 20px;
+ position: relative;
+ overflow: hidden;
+ border: 2px solid var(--color);
+ transition: color .5s;
+ z-index: 1;
+ font-size: 17px;
+ border-radius: 6px;
+ font-weight: 500;
+ color: var(--color);
+}
+
+button:before {
+ content: "";
+ position: absolute;
+ z-index: -1;
+ background: var(--color);
+ height: 150px;
+ width: 200px;
+ border-radius: 50%;
+}
+
+button:hover {
+ color: #fff;
+}
+
+button:before {
+ top: 100%;
+ left: 100%;
+ transition: all .7s;
+}
+
+button:hover:before {
+ top: -30px;
+ left: -30px;
+}
+
+button:active:before {
+ background: #3a0ca3;
+ transition: background 0s;
+}
+
+        
+
+    </style>
+</head>
+<body>
+    
+    <h1>You can search pixabay pictures Here</h1>
+    <input type="search"name="search" id="search" autocomplete="off">
+    <button id="btn">search</button> <br>
+    <div id="parent">
+        <div id="demo">
+
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
